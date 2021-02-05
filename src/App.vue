@@ -1,26 +1,83 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <section class="principal container-fluid">
+    <nav-bar :name="name" :lastName="lastName" />
+    <div class="d-flex flex-row">
+      <left-bar />
+      <div class="container">
+        <div class="row">
+          <h2 class="gotham-title col-2">Dashboard</h2>
+          <open-baner bootstrapCol="col-12" :name="name" :message="message" />
+        </div>
+        <div class="row">
+          <h2 class="gotham-title col-12">Events</h2>
+          <slider class="col-8" :imgSlider="imageList" :tags="tags" />
+          <events class="col-4" />
+        </div>
+        <div class="row">
+          <div class="d-flex title align-items-center col-12">
+            <h2 class="gotham-title col-2">Activity</h2>
+            <div class="line "></div>
+          </div>
+          <activities class="col-12" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section></section>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import leftBar from "@/components/leftBar.vue";
+import navBar from "@/components/navBar.vue";
+import openBaner from "@/components/openBaner.vue";
+import slider from "@/components/slider.vue";
+import Events from "./components/events.vue";
+import Activities from './components/activities.vue';
 
 export default {
   name: "App",
+  data() {
+    return {
+      name: "Clarence",
+      lastName: "Russell",
+      message: "Ta-da! You’re up to date. 🥳",
+      imageList: ["slider1.png", "slider2.png", "slider3.png"],
+      tags: ["cience", "design", "programing"],
+    };
+  },
   components: {
-    HelloWorld
-  }
+    leftBar,
+    navBar,
+    openBaner,
+    slider,
+    Events,
+    Activities,
+  },
 };
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" scoped>
+@import "@/assets/styles/_variables.scss";
+
+.container-fluid {
+  padding: 0;
+}
+.container {
+  max-width: 1400px;
+}
+.border-v {
+  border-radius: 13px;
+  background: none;
+}
+.row {
+  margin: 0;
+}
+.principal {
+  background: #f5f5fb;
+}
+.gotham-title {
+  margin: 50px 0;
+  position: relative;
+  z-index: 2;
 }
 </style>
