@@ -5,7 +5,10 @@
       <left-bar />
       <div class="container">
         <div class="row">
-          <h2 class="gotham-title col-2">Dashboard</h2>
+          <div class="col-12 d-flex justify-content-between">
+          <h2 class="gotham-title">Dashboard</h2>
+          <learning-box />
+          </div>
           <open-baner bootstrapCol="col-12" :name="name" :message="message" />
         </div>
         <div class="row">
@@ -29,7 +32,6 @@
             </div>
             <progress-general />
             <bottom-baner />
-            <!-- <img class="mt-auto" style="width:100%" src="@/assets/img/Oval.png" alt="" /> -->
           </div>
         </div>
       </div>
@@ -47,7 +49,8 @@ import Events from "./components/events.vue";
 import Activities from "./components/activities.vue";
 import ProgressOverview from "./components/progressOverview.vue";
 import ProgressGeneral from "./components/progressGeneral.vue";
-import BottomBaner from './components/bottomBaner.vue';
+import BottomBaner from "./components/bottomBaner.vue";
+import LearningBox from './components/learningBox.vue';
 
 export default {
   name: "App",
@@ -70,10 +73,10 @@ export default {
     ProgressOverview,
     ProgressGeneral,
     BottomBaner,
+    LearningBox
   },
 };
 </script>
-
 <style lang="scss" scoped>
 @import "@/assets/styles/_variables.scss";
 
