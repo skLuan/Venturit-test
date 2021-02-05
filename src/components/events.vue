@@ -38,13 +38,7 @@ export default {
 .title{
     margin-bottom: 20px;
 }
-// .line {
-//   background: #e8e8ee;
-//   box-sizing: content-box;
-//   height: 2px;
-//   overflow: visible;
-//   margin: auto 0;
-// }
+
 .gotham-bold {
   opacity: 0.86;
   font-size: 15px;

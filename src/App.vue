@@ -16,9 +16,20 @@
         <div class="row">
           <div class="d-flex title align-items-center col-12">
             <h2 class="gotham-title col-2">Activity</h2>
-            <div class="line "></div>
+            <div class="line"></div>
           </div>
           <activities class="col-12" />
+        </div>
+        <div class="row">
+          <progress-overview class="col-4" />
+          <div class="col-8 d-flex flex-column">
+            <div class="d-flex title align-items-center">
+              <h2 class="gotham-title col-2">Progress</h2>
+              <div class="line ml-3"></div>
+            </div>
+            <progress-general />
+            <img class="mt-auto" style="width:100%" src="@/assets/img/Oval.png" alt="" />
+          </div>
         </div>
       </div>
     </div>
@@ -32,7 +43,9 @@ import navBar from "@/components/navBar.vue";
 import openBaner from "@/components/openBaner.vue";
 import slider from "@/components/slider.vue";
 import Events from "./components/events.vue";
-import Activities from './components/activities.vue';
+import Activities from "./components/activities.vue";
+import ProgressOverview from "./components/progressOverview.vue";
+import ProgressGeneral from "./components/progressGeneral.vue";
 
 export default {
   name: "App",
@@ -52,6 +65,8 @@ export default {
     slider,
     Events,
     Activities,
+    ProgressOverview,
+    ProgressGeneral,
   },
 };
 </script>

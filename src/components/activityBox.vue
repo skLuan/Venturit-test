@@ -55,11 +55,9 @@ export default {
           
           for (let [i, user] of users.entries()) {
               tempUsers = tempUsers + user;
-            console.log(i);
           if (i < users.length) tempUsers = tempUsers + " and ";
         }
       }
-      console.log(tempUsers);
       return tempUsers;
     },
   },
