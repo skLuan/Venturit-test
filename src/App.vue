@@ -20,7 +20,7 @@
           </div>
           <activities class="col-12" />
         </div>
-        <div class="row">
+        <div class="row mb-5">
           <progress-overview class="col-4" />
           <div class="col-8 d-flex flex-column">
             <div class="d-flex title align-items-center">
@@ -28,7 +28,8 @@
               <div class="line ml-3"></div>
             </div>
             <progress-general />
-            <img class="mt-auto" style="width:100%" src="@/assets/img/Oval.png" alt="" />
+            <bottom-baner />
+            <!-- <img class="mt-auto" style="width:100%" src="@/assets/img/Oval.png" alt="" /> -->
           </div>
         </div>
       </div>
@@ -46,6 +47,7 @@ import Events from "./components/events.vue";
 import Activities from "./components/activities.vue";
 import ProgressOverview from "./components/progressOverview.vue";
 import ProgressGeneral from "./components/progressGeneral.vue";
+import BottomBaner from './components/bottomBaner.vue';
 
 export default {
   name: "App",
@@ -67,6 +69,7 @@ export default {
     Activities,
     ProgressOverview,
     ProgressGeneral,
+    BottomBaner,
   },
 };
 </script>
