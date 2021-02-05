@@ -35,8 +35,8 @@ export default {
 .row {
   margin-right: 0;
 }
-.title{
-    margin-bottom: 20px;
+.title {
+  margin-bottom: 20px;
 }
 
 .gotham-bold {

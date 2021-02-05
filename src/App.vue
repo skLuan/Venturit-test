@@ -6,8 +6,8 @@
       <div class="container">
         <div class="row">
           <div class="col-12 d-flex justify-content-between">
-          <h2 class="gotham-title">Dashboard</h2>
-          <learning-box />
+            <h2 class="gotham-title">Dashboard</h2>
+            <learning-box />
           </div>
           <open-baner bootstrapCol="col-12" :name="name" :message="message" />
         </div>
@@ -19,7 +19,8 @@
         <div class="row">
           <div class="d-flex title align-items-center col-12">
             <h2 class="gotham-title col-2">Activity</h2>
-            <div class="line"></div>
+            <div class="line mr-3"></div>
+            <arrow-button style="rgba(157,155,182,0.17)" direction="right" />
           </div>
           <activities class="col-12" />
         </div>
@@ -50,7 +51,8 @@ import Activities from "./components/activities.vue";
 import ProgressOverview from "./components/progressOverview.vue";
 import ProgressGeneral from "./components/progressGeneral.vue";
 import BottomBaner from "./components/bottomBaner.vue";
-import LearningBox from './components/learningBox.vue';
+import LearningBox from "./components/learningBox.vue";
+import ArrowButton from "./components/arrowButton.vue";
 
 export default {
   name: "App",
@@ -73,7 +75,8 @@ export default {
     ProgressOverview,
     ProgressGeneral,
     BottomBaner,
-    LearningBox
+    LearningBox,
+    ArrowButton,
   },
 };
 </script>

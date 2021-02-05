@@ -42,10 +42,11 @@
               alt="notification-icon"
             />
           </a>
-          <div class="dropdown-menu" aria-labelledby="dropdownId">
+          <drop-down-menu />
+          <!-- <div class="dropdown-menu" aria-labelledby="dropdownId">
             <a class="dropdown-item" href="#">Action 1</a>
             <a class="dropdown-item" href="#">Action 2</a>
-          </div>
+          </div> -->
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#"
@@ -72,6 +73,8 @@
 </template>
 
 <script>
+import dropDownMenu from "./dropDownMenu.vue";
+
 export default {
   name: "navBar",
   data() {
@@ -80,9 +83,12 @@ export default {
       logoHeight: "46",
     };
   },
-  props:{
+  props: {
     name: String,
-    lastName: String
+    lastName: String,
+  },
+  components:{
+    dropDownMenu
   },
   computed: {
     viewbox() {
@@ -97,7 +103,7 @@ export default {
 .navbar {
   height: 79px;
   background: white;
-  box-shadow: 0 2px 34px 0 rgba(27,20,119,0.1);
+  box-shadow: 0 2px 34px 0 rgba(27, 20, 119, 0.1);
 }
 .form-inline {
   margin: 0 auto;
@@ -152,8 +158,8 @@ export default {
   line-height: 26px;
 }
 .profile {
-    #profile-picture {
-      margin-right: 10px;
+  #profile-picture {
+    margin-right: 10px;
     width: 56px;
   }
 }
