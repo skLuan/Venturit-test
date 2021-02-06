@@ -1,46 +1,46 @@
-@import '~bootstrap/scss/bootstrap.scss';
-@import './variables.scss';
-@import './fonts.scss';
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./variables.scss";
+@import "./fonts.scss";
 
 // ------------------------------------------------ Fonts
 
-
-.nunito-regular{
-    font-family: "nunito regular";
+.nunito-regular {
+  font-family: "nunito regular";
 }
-.nunito-semibold{
-    font-family: "nunito semibold";
+.nunito-semibold {
+  font-family: "nunito semibold";
 }
-.nunito-bold{
-    font-family: "nunito bold";
+.nunito-bold {
+  font-family: "nunito bold";
 }
-.gotham-medium{
-    font-family: "gotham medium";
+.gotham-medium {
+  font-family: "gotham medium";
 }
-.gotham-bold{
-    font-family: "gotham bold";
+.gotham-bold {
+  font-family: "gotham bold";
 }
-.gotham-title{
-    color: $title-color;
-    font-family: $font-titles;
-    font-size: 30px;
-    font-weight: 500;
-    letter-spacing: -0.86px;
-    line-height: 36px;
+.gotham-title {
+  color: $title-color;
+  font-family: $font-titles;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.86px;
+  line-height: 36px;
 }
 // ------------------------------------------------ Utilities
 .line {
-    width: 100%;
-    background: #e8e8ee;
-    box-sizing: content-box;
-    height: 2px;
-    overflow: visible;
-    margin: auto 0;
-  }
-  .line-vertical {
-    background: #e8e8ee;
-    box-sizing: content-box;
-    width: 1px;
-    overflow: visible;
-    margin: 0 auto;
-  }
+  width: 100%;
+  background: #e8e8ee;
+  box-sizing: content-box;
+  height: 2px;
+  overflow: visible;
+  margin: auto 0;
+}
+.line-vertical {
+  background: #e8e8ee;
+  box-sizing: content-box;
+  width: 1px;
+  overflow: visible;
+  margin: 0 auto;
+}
+

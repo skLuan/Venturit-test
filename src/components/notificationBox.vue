@@ -18,6 +18,7 @@ export default {
       return require("@/assets/img/" + item);
     },
   },
+  
 };
 </script>
 

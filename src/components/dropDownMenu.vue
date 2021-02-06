@@ -5,6 +5,12 @@
       :key="i"
       :info="item"
     ></notification-box>
+    <font-awesome-icon
+      size="4x"
+      icon="sort-up"
+      id="sort"
+      :mask="['far', 'sort-up']"
+    />
   </div>
 </template>
 
@@ -39,8 +45,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#sort {
+  position: inherit;
+  top: -19px;
+  left: 205px;
+  z-index: 900;
+
+  color: white;
+}
 .dropdown-menu {
   border: none;
-  border-radius: 15px;
+  border-radius: 5px;
+  box-shadow: 0 22px 34px 0 rgba(27, 20, 119, 0.11);
+  border: 1px solid rgba(186, 185, 216, 0.22);
+  left: -200px;
 }
 </style>

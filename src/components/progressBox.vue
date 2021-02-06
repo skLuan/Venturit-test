@@ -1,6 +1,6 @@
 <template>
-  <button class="d-flex align-items-center justify-items-between">
-    <p class="gotham-bold subtitle mb-0">{{ info.text }}</p>
+  <button class="d-flex align-items-center justify-content-between col-lg-3">
+    <p class="gotham-bold subtitle mb-0 text-left">{{ info.text }}</p>
     <p class="gotham-medium title mb-0">{{ info.number }}</p>
   </button>
 </template>
@@ -28,12 +28,12 @@ export default {
 
 .d-flex {
   max-height: 79px;
-  max-width: 202px;
+  // max-width: 250px;
   width: 100%;
   height: 100%;
   border-radius: 15px;
   background: white;
-  padding: 20px;
+  padding: 20px 25px;
   margin: 0 15px 25px 15px;
   border: none;
   color: #9d9bb6;

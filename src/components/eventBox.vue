@@ -24,10 +24,11 @@ export default {
 <style lang="scss" scoped>
 .d-flex {
   max-height: 109px;
-  height: 100%;
   border-radius: 15px;
   background: white;
   margin: 16px 0;
+  padding: 20px;
+
 }
 img {
   max-width: 62px;

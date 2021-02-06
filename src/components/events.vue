@@ -1,8 +1,8 @@
 <template>
   <section>
     <div class="row title align-items-center">
-      <h3 class="gotham-bold text-uppercase col-5">events today</h3>
-      <div class="line col-6"></div>
+      <h3 class="gotham-bold text-uppercase col-lg-5 col-md-4 col-sm-4">events today</h3>
+      <div class="line col-lg-6 col-md-7 col-sm-7"></div>
     </div>
     <event-box v-for="(item, i) in info" :key="i" :info="item"></event-box>
   </section>
@@ -32,11 +32,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+section{
+  
+}
 .row {
   margin-right: 0;
 }
 .title {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .gotham-bold {
