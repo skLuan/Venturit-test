@@ -18,7 +18,7 @@ img {
 }
 .nunito-regular {
   bottom: 0;
-  left: 15%;
+  left: 12%;
   color: white;
   font-size: 16px;
   letter-spacing: 0;

@@ -23,24 +23,24 @@ export default {
         {
           img: "notification1.png",
           text: "You have a new session to re…",
-          date: "Today, 10:30AM",
+          date: "Today, 10:30AM"
         },
         {
           img: "notification2.png",
           text: "You have a virtual session…",
-          date: "Yesterday, 9:45PM",
+          date: "Yesterday, 9:45PM"
         },
         {
           img: "notification3.png",
           text: "You have a face to face sta…",
-          date: "Yesterday, 10:00PM",
-        },
-      ],
+          date: "Yesterday, 10:00PM"
+        }
+      ]
     };
   },
   components: {
-    NotificationBox,
-  },
+    NotificationBox
+  }
 };
 </script>
 

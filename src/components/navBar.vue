@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-sm">
+  <nav class="navbar navbar-expand-lg d-flex justify-content-between">
     <a class="navbar-brand" href="#">
       <img
         src="@/assets/img/logo.png"
@@ -8,20 +8,28 @@
         :height="logoHeight"
       />
     </a>
-    <div
-      class="collapse navbar-collapse d-flex justify-content-between"
-      id="collapsibleNavId"
+    <form class="form-inline my-lg-0 position-relative">
+      <input class="form-control" type="text" placeholder="Search and find" />
+      <button class="btn btn-mine my-2 my-sm-0 position-absolute" type="submit">
+        <font-awesome-icon :icon="['fas', 'search']" />
+      </button>
+    </form>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
     >
-      <form class="form-inline my-2 my-lg-0 position-relative">
-        <input class="form-control" type="text" placeholder="Search and find" />
-        <button
-          class="btn btn-mine my-2 my-sm-0 position-absolute"
-          type="submit"
-        >
-          <font-awesome-icon :icon="['fas', 'search']" />
-        </button>
-      </form>
-      <ul class="navbar-nav mt-2 mt-lg-0 d-flex align-items-center">
+      <!-- <span class="navbar-toggler-icon">
+      </span> -->
+      <font-awesome-icon class="navbar-toggler-icon" :icon="['fas', 'bars']" />
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav mt-2 mt-lg-0 d-flex ">
         <li class="nav-item">
           <button class="gotham-medium btn-add btn my-2 my-sm-0" type="submit">
             +ADD
@@ -43,10 +51,6 @@
             />
           </a>
           <drop-down-menu />
-          <!-- <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="#">Action 1</a>
-            <a class="dropdown-item" href="#">Action 2</a>
-          </div> -->
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#"
@@ -87,29 +91,39 @@ export default {
     name: String,
     lastName: String,
   },
-  components:{
-    dropDownMenu
+  components: {
+    dropDownMenu,
   },
-  computed: {
-    viewbox() {
-      return "0 0" + " " + this.logoWidth + " " + this.logoHeight;
-    },
-  },
+  computed: {},
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/styles/_variables.scss";
 .navbar {
-  height: 79px;
+  z-index: 900;
   background: white;
   box-shadow: 0 2px 34px 0 rgba(27, 20, 119, 0.1);
+  &-collapse {
+    z-index: 1000;
+    flex-grow: initial;
+  }
+
+  &-toggler {
+    background: #e5e5ee;
+  }
+  &-nav {
+    flex-direction: row;
+    justify-content: end;
+  }
+
 }
 .form-inline {
   margin: 0 auto;
+  width: 311px;
   .form-control {
+    width: 100%;
     border-radius: 0;
-    width: 311px;
     height: 46px;
     background: #f5f5fb;
     border: none;
@@ -149,7 +163,7 @@ export default {
   }
 }
 .nav-item {
-  margin: 0 10px;
+  margin: auto 10px;
 }
 .nav-link {
   color: #3e3a6f;

@@ -1,7 +1,9 @@
 <template>
   <div class="box d-flex flex-column align-items-center">
     <div class="m-auto">
-      <p class="gotham-bold subtitle text-align-center mb-2">Currently Learning</p>
+      <p class="gotham-bold subtitle text-align-center mb-2">
+        Currently Learning
+      </p>
       <div class="d-flex align-items-center">
         <img src="@/assets/img/country.png" alt="" />
         <p class="gotham-bold title ml-2">English</p>
@@ -15,8 +17,8 @@ export default {
   methods: {
     imgPath(item) {
       return require("@/assets/img/" + item);
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -39,15 +39,21 @@
 
 <script>
 export default {
-  name: "leftBar"
+  name: "leftBar",
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/styles/_variables.scss";
 ul {
+  @media (max-width: 768px) {
+    padding-top: 72px;
+  }
+  padding-top: 89px;
+  position: fixed;
+  z-index: 899;
   width: fit-content;
-  height: inherit;
+  height: 100vh;
   background: $color-blue;
   border-radius: 0;
   .list-group-item {

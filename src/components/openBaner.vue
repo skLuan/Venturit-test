@@ -1,7 +1,9 @@
 <template>
   <div :class="bootstrapCol">
     <div class="position-relative border-v baner">
-      <div class="col-7 md-col-8 position-absolute d-flex d-absolute">
+      <div
+        class="col-lg-7 col-md-11 col-sm-11 position-absolute d-flex"
+      >
         <img id="man" class="" src="@/assets/img/man.png" alt="man-rocket" />
         <div class="title-info">
           <h2 class="gotham-title m-0 mb-2 text-white">
@@ -41,10 +43,15 @@ export default {
   #img-baner {
     width: 100%;
   }
+
   #man {
-    // padding: 0;
+    @media (max-width: 768px) { 
+      width: 19%;
+    }
     width: 30%;
+
   }
+
   .position-absolute {
     bottom: 0;
   }
@@ -54,6 +61,8 @@ export default {
     display: flex;
     flex-direction: column;
     color: white;
+    position: relative;
+    bottom: -10px;
   }
   .nunito-semibold {
     color: #ffffff;

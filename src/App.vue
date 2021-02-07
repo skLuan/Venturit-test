@@ -1,51 +1,45 @@
 <template>
   <section class="principal container-fluid">
+    <left-bar />
     <nav-bar :name="name" :lastName="lastName" />
-    <div class="d-flex flex-row">
-      <left-bar />
-      <div class="container">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-between">
-            <h2 class="gotham-title">Dashboard</h2>
-            <learning-box />
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-between">
+          <h2 class="gotham-title">Dashboard</h2>
+          <learning-box />
+        </div>
+        <open-baner bootstrapCol="col-12" :name="name" :message="message" />
+      </div>
+      <div class="row">
+        <h2 class="gotham-title col-12">Events</h2>
+        <slider
+          class="col-lg-8 col-md-12 col-sm-10"
+          :imgSlider="imageList"
+          :tags="tags"
+        />
+        <events class="col-lg-4 col-md-12 col-sm-12" />
+      </div>
+      <div class="row">
+        <div class="d-flex title align-items-center col-12">
+          <h2 class="gotham-title">Activity</h2>
+          <div class="line mr-3"></div>
+          <arrow-button style="rgba(157,155,182,0.17)" direction="right" />
+        </div>
+        <activities class="col-12" />
+      </div>
+      <div class="row mb-5">
+        <progress-overview class="col-lg-4 col-md-6 col-sm-12" />
+        <div class="col-lg-8 col-md-6 col-sm-12 d-flex flex-column">
+          <div class="d-flex title align-items-center">
+            <h2 class="gotham-title mt-md-4 mb-md-4 col-lg-2 col-md-6">
+              Progress
+            </h2>
+            <div class="line ml-3"></div>
           </div>
-          <open-baner
-            bootstrapCol="lg-col-12 md-col-12 sm-col-9"
-            :name="name"
-            :message="message"
-          />
+          <progress-general />
+          <bottom-baner v-if="showBaner" />
         </div>
-        <div class="row">
-          <h2 class="gotham-title col-12">Events</h2>
-          <slider
-            class="col-lg-8 col-md-12 col-sm-12"
-            :imgSlider="imageList"
-            :tags="tags"
-          />
-          <events class="col-lg-4 col-md-12 col-sm-12" />
-        </div>
-        <div class="row">
-          <div class="d-flex title align-items-center col-12">
-            <h2 class="gotham-title">Activity</h2>
-            <div class="line mr-3"></div>
-            <arrow-button style="rgba(157,155,182,0.17)" direction="right" />
-          </div>
-          <activities class="col-12" />
-        </div>
-        <div class="row mb-5">
-          <progress-overview class="col-lg-4 col-md-6 col-sm-12" />
-          <div class="col-lg-8 col-md-6 col-sm-12 d-flex flex-column">
-            <div class="d-flex title align-items-center">
-              <h2 class="gotham-title mt-md-4 mb-md-4 col-lg-2 col-md-6">
-                Progress
-              </h2>
-              <div class="line ml-3"></div>
-            </div>
-            <progress-general />
-            <bottom-baner v-if="showBaner" />
-          </div>
-          <bottom-baner class="col-md-12 col-sm-12" v-if="showBaner == false" />
-        </div>
+        <bottom-baner class="col-md-12 col-sm-12" v-if="showBaner == false" />
       </div>
     </div>
   </section>
@@ -112,6 +106,7 @@ export default {
 }
 .container {
   max-width: 1400px;
+  padding-left: 75px;
 }
 .border-v {
   border-radius: 13px;

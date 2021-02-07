@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="intern">
-      <h2 class="gotham-title d-flex flex-column align-items-center">
+      <h2 class="gotham-title d-flex flex-column align-items-center text-center">
         Progress overview
       </h2>
       <div id="circle-container"></div>
@@ -48,30 +48,15 @@ export default {
     return {
       options: {
         color: "#007AFF",
-        strokeWidth: 0.5,
+        strokeWidth: 0.5
       },
       animOptions: {
-        // Duration for animation in milliseconds
-        // Default: 800
         duration: 1200,
-
-        // Easing for animation. See #easing section.
-        // Default: 'linear'
-        easing: "linear",
-
-        // See #custom-animations section
-        // Built-in shape passes reference to itself and a custom attachment
-        // object to step function
-        // from: { color: "#eee" },
-        // to: { color: "#000" },
-        // step: function (state, circle, attachment) {
-        //   circle.path.setAttribute("stroke", state.color);
-        // },
-      },
+        easing: "linear"
+      }
     };
   },
   mounted() {
-    // this.$refs.line.animate(this.animOptions);
     var circle = new ProgressBar.Circle(
       document.getElementById("circle-container"),
       {
@@ -99,16 +84,14 @@ export default {
             color: "white",
             transform: {
               prefix: true,
-              value: "translate(-50%, -50%)",
-            },
-          },
+              value: "translate(-50%, -50%)"
+            }
+          }
         },
         from: { color: "#ff794f" },
         to: { color: "##FED200" },
         // Set default step function for all animate calls
-        step: function (state, circle) {
-          //   circle.path.setAttribute("stroke", state.color);
-          //   circle.path.setAttribute("stroke-width", state.width);
+        step: function(state, circle) {
 
           var value = Math.round(circle.value() * 100);
           if (value === 0) {
@@ -116,16 +99,15 @@ export default {
           } else {
             circle.setText(value);
           }
-        },
+        }
       }
     );
     circle.animate(0.4); // Number from 0.0 to 1.0
-  },
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-
 #circle-container {
   margin: 20px auto;
   width: 200px;
@@ -139,11 +121,11 @@ export default {
   color: #ff794f;
 }
 .intern {
-    margin-top: 37px;
+  margin-top: 37px;
   background: #1a2d7d;
   box-shadow: 6px 32px 45px 0 rgba(36, 53, 157, 0.13);
   border-radius: 7px;
-  padding: 25px 56px 74px 56px;
+  padding: 25px 0 74px 0;
 }
 .gotham-title {
   color: white;
@@ -153,10 +135,15 @@ export default {
   line-height: 36px;
 }
 .info {
-  padding: 25px;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 25px 0;
   border-radius: 19px;
   background-color: rgba(198, 198, 205, 0.13);
   color: white;
+  section{
+    margin: 0 20px;
+  }
 }
 .status-text {
   margin-left: 7px;

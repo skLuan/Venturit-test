@@ -12,31 +12,30 @@ export default {
       info: [
         {
           text: "Total Webinars",
-          number: 9,
+          number: 9
         },
         {
           text: "Pending Assignments",
-          number: 0,
+          number: 0
         },
 
         {
           text: "Total Units",
-          number: 5,
+          number: 5
         },
         {
           text: "Total Readings",
-          number: 14,
+          number: 14
         },
         {
           text: "Total Videos",
-          number: 5,
-        },
-      ],
+          number: 5
+        }
+      ]
     };
   },
-  components: { progressBox },
+  components: { progressBox }
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

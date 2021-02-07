@@ -13,12 +13,20 @@ import {
   faArrowRight,
   faCaretRight,
   faCircle,
-  faSortUp
+  faSortUp,
+  faBars
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-
-library.add(faSearch, faArrowRight, faArrowLeft, faCaretRight, faCircle, faSortUp);
+library.add(
+  faSearch,
+  faArrowRight,
+  faArrowLeft,
+  faCaretRight,
+  faCircle,
+  faSortUp,
+  faBars
+);
 
 createApp(App)
   .component("font-awesome-icon", FontAwesomeIcon)

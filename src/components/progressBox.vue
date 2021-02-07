@@ -9,17 +9,17 @@
 export default {
   data() {
     return {
-      active: false,
+      active: false
     };
   },
   props: {
-    info: Object,
+    info: Object
   },
   methods: {
     imgPath(item) {
       return require("@/assets/img/" + item);
-    },
-  },
+    }
+  }
 };
 </script>
 

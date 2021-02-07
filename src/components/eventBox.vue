@@ -11,13 +11,13 @@
 <script>
 export default {
   props: {
-    info: Object,
+    info: Object
   },
   methods: {
     imgPath(item) {
       return require("@/assets/img/" + item);
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -28,7 +28,6 @@ export default {
   background: white;
   margin: 16px 0;
   padding: 20px;
-
 }
 img {
   max-width: 62px;

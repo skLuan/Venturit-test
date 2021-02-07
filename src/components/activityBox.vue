@@ -38,12 +38,12 @@
 export default {
   data() {
     return {
-      isClicked: false,
+      isClicked: false
     };
   },
   props: {
     info: Object,
-    users: Array,
+    users: Array
   },
   methods: {
     imgPath(item) {
@@ -52,15 +52,14 @@ export default {
     showInfo(users, heading) {
       let tempUsers = "";
       if (users.length > 0 && heading == "headingOne") {
-          
-          for (let [i, user] of users.entries()) {
-              tempUsers = tempUsers + user;
+        for (let [i, user] of users.entries()) {
+          tempUsers = tempUsers + user;
           if (i < users.length) tempUsers = tempUsers + " and ";
         }
       }
       return tempUsers;
-    },
-  },
+    }
+  }
 };
 </script>
 

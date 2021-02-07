@@ -11,14 +11,14 @@ export default {
     return {};
   },
   props: {
-    direction: String,
+    direction: String
   },
   methods: {
     arrowDirection(direction) {
       if (direction == "right") return ["fas", "arrow-right"];
       else if (direction == "left") return ["fas", "arrow-left"];
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -29,7 +29,7 @@ export default {
 .btn:hover,
 .btn:focus,
 .btn-light:focus {
-    padding: 0.375rem 1.3rem;
+  padding: 0.375rem 1.3rem;
   color: #3e3a6f;
   background: white;
   border: none;

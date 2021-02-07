@@ -11,14 +11,13 @@
 <script>
 export default {
   props: {
-    info: Object,
+    info: Object
   },
   methods: {
     imgPath(item) {
       return require("@/assets/img/" + item);
-    },
-  },
-  
+    }
+  }
 };
 </script>
 
@@ -37,10 +36,10 @@ img {
     margin: 0;
   }
   .subtitle {
-      color: #9D9BB6;
-  font-size: 13px;
-  letter-spacing: 0;
-  line-height: 16px;
+    color: #9d9bb6;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 16px;
   }
   .title {
     color: #192452;

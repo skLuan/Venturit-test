@@ -19,7 +19,9 @@
           </h5>
         </div>
         <img :src="imagePath(image)" class="d-block w-100" alt="slider photo" />
-        <div class="carousel-caption d-flex d-md-flex justify-content-between">
+        <div
+          class="carousel-caption d-flex justify-content-between align-items-center"
+        >
           <h4 class="gotham-medium text-left col-6">{{ info[index] }}</h4>
           <h4 class="gotham-medium text-right">{{ date[index] }}</h4>
         </div>
@@ -44,7 +46,6 @@
       <span aria-hidden="true"></span>
       <span class="sr-only"></span>
       <arrow-button direction="right" class=""> </arrow-button>
-
     </a>
   </div>
 </template>
@@ -85,7 +86,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/_variables.scss";
 .carousel-indicators {
   li {
     width: 10px;
@@ -115,6 +115,9 @@ export default {
 .carousel-caption {
   padding: 0;
   bottom: 25%;
+  top: 25%;
+
+  margin: auto 0;
   h4 {
     color: #ffffff;
     font-size: 40px;
